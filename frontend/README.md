@@ -1,31 +1,6 @@
-# Reddit Sentiment Analysis Project
+# Reddit Sentiment Analysis - Frontend
 
-This repository contains a full-fledged sentiment analysis application with separate frontend and backend components.
-
-## 🗂️ Project Structure
-
-- **frontend/**: The complete React.js frontend of the application.
-- **backend/**: Ready to be added for API and data processing.
-
-## 🛠️ Getting Started
-
-- Navigate to `frontend/` for instructions on setting up the React frontend.
-
-## 🚀 Complete Your Application
-
-- Add a `backend/` folder for server-side logic and APIs.
-
----
-
-Happy Developing! 🎉
-
----
-
-The detailed frontend setup is provided below:
-
-# Reddit Sentiment Analysis - React App
-
-A beautiful, modern React.js application for analyzing Reddit sentiment with interactive charts and visualizations.
+A beautiful, modern React.js frontend for analyzing Reddit sentiment with interactive charts and visualizations.
 
 ## 🌟 Features
 
@@ -44,23 +19,22 @@ A beautiful, modern React.js application for analyzing Reddit sentiment with int
 
 ### Installation
 
-1. **Clone or download this project**
-2. **Navigate to the project directory**
+1. **Navigate to the frontend directory**
    ```bash
-   cd Reddit-Sentiment-Analysis-final
+   cd frontend
    ```
 
-3. **Install dependencies**
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-4. **Start development server**
+3. **Start development server**
    ```bash
    npm start
    ```
 
-5. **Open your browser**
+4. **Open your browser**
    - Local: `http://localhost:3000`
    - Your app will automatically reload when you make changes
 
@@ -81,16 +55,6 @@ npm run build
 
 This creates a `build/` folder with optimized files ready for deployment.
 
-## 🌐 Deployment Options
-
-### Static Hosting (Recommended)
-1. Run `npm run build`
-2. Upload the `build/` folder to:
-   - Netlify
-   - Vercel
-   - GitHub Pages
-   - Any static hosting service
-
 ## 🎯 How to Use
 
 1. **Enter a keyword** in the search box (e.g., "AI", "Tesla", "Bitcoin")
@@ -102,16 +66,9 @@ This creates a `build/` folder with optimized files ready for deployment.
    - Popular words with colorful gradients
    - Top hashtags with progress bars
 
-## 🔧 Configuration
+## 🔧 Backend Integration
 
-### Environment Variables
-Create a `.env` file in the root directory:
-```
-REACT_APP_BACKEND_URL=http://localhost:5000
-```
-
-### API Integration
-To connect to a real backend, update the `handleAnalysis` function in `src/App.js`:
+To connect to the backend API, update the `handleAnalysis` function in `src/App.js`:
 
 ```javascript
 // Replace the mock implementation with:
@@ -119,10 +76,16 @@ const response = await axios.post(`${API}/analyze`, { keyword });
 setAnalysisData(response.data);
 ```
 
+### Environment Variables
+Create a `.env` file in the frontend directory:
+```
+REACT_APP_BACKEND_URL=http://localhost:5000
+```
+
 ## 📁 Project Structure
 
 ```
-Reddit-Sentiment-Analysis-final/
+frontend/
 ├── public/
 │   ├── index.html
 │   └── favicon.ico
@@ -145,11 +108,22 @@ Reddit-Sentiment-Analysis-final/
 - **Lucide React** - Beautiful & consistent icons
 - **Axios** - Promise-based HTTP client
 
-## 🎉 Enjoy!
+## 🌈 UI Features
 
-Your Reddit Sentiment Analysis app is ready to use! The clean, modern interface provides an excellent user experience for analyzing social media sentiment data.
+- **Gradient Backgrounds**: Beautiful dark theme with blue gradients
+- **Glassmorphism Effects**: Translucent cards with backdrop blur
+- **Interactive Elements**: Hover effects and smooth transitions
+- **Responsive Grid**: Adapts to different screen sizes
+- **Custom Animations**: Loading spinners and progress bars
+
+## 📊 Mock Data
+
+The frontend currently uses mock data for demonstration. When connected to the backend, it will display real sentiment analysis results.
+
+## 🎉 Ready for Backend!
+
+This frontend is designed to work seamlessly with a backend API. Simply update the API endpoints and the frontend will display real-time sentiment analysis data.
 
 ---
 
-**Happy Analyzing!** 🚀✨
-
+**Happy Coding!** 🚀✨

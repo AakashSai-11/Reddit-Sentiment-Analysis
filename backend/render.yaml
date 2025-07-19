@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: reddit-sentiment-backend
+    env: node
+    plan: free
+    buildCommand: npm install && pip install -r requirements.txt
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET  
+        sync: false
+      - key: REDDIT_USER_AGENT
+        sync: false

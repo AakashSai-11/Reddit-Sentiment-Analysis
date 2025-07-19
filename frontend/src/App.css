@@ -1,0 +1,211 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Word cloud container styling */
+.recharts-wrapper {
+  color: white;
+}
+
+.recharts-tooltip-wrapper {
+  color: #111827 !important;
+}
+
+/* Glassmorphism effect enhancements */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button hover effects */
+.btn-gradient {
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #2563EB, #7C3AED);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress bar animation */
+@keyframes progressGrow {
+  from {
+    width: 0%;
+  }
+}
+
+.progress-bar {
+  animation: progressGrow 1s ease-out;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* Custom focus styles */
+input:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Loading state improvements */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Hide external branding links */
+a[href*="emergent"],
+a[href*="recharts"],
+a[href*="wordcloud"],
+.recharts-wrapper a,
+.recharts-legend a,
+*[class*="made-with"],
+*[class*="powered-by"],
+*[class*="branding"],
+*[class*="credit"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide any bottom-right positioned links */
+.fixed.bottom-0.right-0,
+.absolute.bottom-0.right-0,
+*[style*="position: fixed"][style*="bottom"][style*="right"],
+*[style*="position: absolute"][style*="bottom"][style*="right"] {
+  display: none !important;
+}
+
+/* Hide specific branding elements more safely */
+*[title*="emergent"],
+*[title*="made with emergent"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Ensure our app takes full control */
+#root {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Custom Progress Bar Animations */
+@keyframes progress-bar {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 30%;
+  }
+  50% {
+    width: 65%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-progress-bar {
+  animation: progress-bar 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
