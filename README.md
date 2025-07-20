@@ -145,11 +145,4 @@ Reddit-Sentiment-Analysis-final/
 - **Lucide React** - Beautiful & consistent icons
 - **Axios** - Promise-based HTTP client
 
-## 🎉 Enjoy!
-
-Your Reddit Sentiment Analysis app is ready to use! The clean, modern interface provides an excellent user experience for analyzing social media sentiment data.
-
----
-
-**Happy Analyzing!** 🚀✨
 
