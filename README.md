@@ -6,19 +6,6 @@ This repository contains a full-fledged sentiment analysis application with sepa
 
 - **frontend/**: The complete React.js frontend of the application.
 - **backend/**: Ready to be added for API and data processing.
-
-## 🛠️ Getting Started
-
-- Navigate to `frontend/` for instructions on setting up the React frontend.
-
-## 🚀 Complete Your Application
-
-- Add a `backend/` folder for server-side logic and APIs.
-
----
-
-Happy Developing! 🎉
-
 ---
 
 The detailed frontend setup is provided below:
